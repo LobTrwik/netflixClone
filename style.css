@@ -2,6 +2,8 @@
 @import url(//db.onlinewebfonts.com/c/9a2ff88a564029f519728e8557f062e4?family=PublicaPlay-Bold);  /* Texto Secundário */
 @import url(//db.onlinewebfonts.com/c/a772434ced4e03816f7e60e6534a1a6e?family=PlanscribeNFW01-Regular); /* Texto Teciário */
 @import url(//db.onlinewebfonts.com/c/3e6392a709ec7ed6c24de0078e477a5e?family=Bebas); /* Texto Fonte */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css'); /* Fonte Awesome */
+
 
 *{
     margin: 0;
@@ -17,28 +19,24 @@ body{
 
 .cabecalho{
     display: table-cell;
-	vertical-align: middle;
-    position: absolute;
-    left: 1.9%;
-    width: 96%;
-    top: 3vh;
-    /*border: 1px solid #d0ff00;*/
-}
-.logo-principal{
     vertical-align: middle;
-    margin-top: 1%;
-    margin-left: 2%;
-    width: 20vh;
-    /*border: 1px solid #ff0800; */
+    position: absolute;
+    width: 100%;
+    height: 11vh;
+    top: 0vh;
+    background-color: rgba(0, 0, 0, 0.781);
+    box-shadow: 2px 0px 10px rgb(0, 0, 0);
+    /* border: 1px solid #d0ff00; */
 }
 .menu{
     width: 100%;
     word-spacing: 5vh;
     font-size: 2.5vh;
-    font-variant: small-caps;
     font-family: 'Recta-Bold';
     text-decoration: none;
+    margin-left: -2vh;
     text-align: end;
+    margin-top: 4vh;
     cursor: context-menu;
     /* border: 1px solid #a30fc0; */
 }
@@ -47,4 +45,16 @@ body{
     text-transform: uppercase;
     cursor:pointer;
     letter-spacing: .3vh;
+}
+.cabecalho i{
+    color: aliceblue;
+    letter-spacing: 1vh;
+    cursor:pointer;
+}
+.logo-principal{
+    position: sticky;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    width: 20vh;
+    /*border: 1px solid #ff0800; */
 }
