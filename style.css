@@ -3,6 +3,16 @@
 @import url(//db.onlinewebfonts.com/c/a772434ced4e03816f7e60e6534a1a6e?family=PlanscribeNFW01-Regular); /* Texto Teciário */
 @import url(//db.onlinewebfonts.com/c/3e6392a709ec7ed6c24de0078e477a5e?family=Bebas); /* Texto Fonte */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css'); /* Fonte Awesome */
+@import url(//db.onlinewebfonts.com/c/f2a118fd61847e5119a2f0befffa1e5e?family=Supernatural+Knight);
+
+@font-face {font-family: "Supernatural Knight";
+    src: url("http://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.eot"); /* IE9*/
+    src: url("http://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("http://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.woff2") format("woff2"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.woff") format("woff"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("http://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.svg#Supernatural Knight") format("svg"); /* iOS 4.1- */
+}
 
 
 *{
@@ -48,14 +58,17 @@ body{
 }
 
 .menu{
-    width: 100%;
+    position: absolute;
+    width: 50%;
+    height: 2vw;
     word-spacing: 5vh;
     font-size: 2vh;
-    font-family: 'Recta-Bold';
+    font-family: "PlanscribeNFW01-Regular";
     text-decoration: none;
-    margin-left: -2vh;
+    margin-left: 48%;
     text-align: end;
-    margin-top: 2.8vh;
+    margin-top: 5px;
+    top: 1vw;
     cursor: context-menu;
     /*border: 1px solid #a30fc0;*/
 }
@@ -79,18 +92,35 @@ body{
 
 .logo-principal{
     position: absolute;
-    margin-top: 1.2vh;
-    margin-left: 1.2vh;
+    margin-top: 1.5vh;
+    left: 4vh;
     width: 15vh;
     top: 0;
     /*border: 1px solid #ff0800; */
 }
+
 .lista-menu:hover{
     animation: degrade-vermelho .5s;
     color: #4d0d0d;
 }
 
+.pesquise-serie{
+    font-family: "PlanscribeNFW01-Regular";
+    padding: 5px 65px 5px 9px;
+}
 
+.pesquise-serie{
+    position: relative;
+    margin-top: 15px;
+    margin-left: 15vw;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(22, 21, 21);
+}
+
+.pesquise-serie:hover{
+    background-color: rgb(15, 15, 15);
+}
 
 @keyframes degrade-vermelho{
     0%{
@@ -164,11 +194,10 @@ body{
     position: relative;
     text-transform: uppercase;
     font-family: 'Recta-Bold';
-    top: -45vh;
     background-color: rgba(255, 255, 255, 0);
     border-style: none;
-    width: 25%;
-    left: 2.5%;
+    top: 7vh;
+    width: 50%;
     height: 6vh;
     border-radius: 1vh;
     font-size: 2vh;
@@ -189,9 +218,9 @@ body{
 
 .texto-recomendado{
     color: #ffff;
-    margin-top: 10vh;
+    margin-top: 0vh;
     font-size: 2vh;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
     margin-left: 2vh;
     text-transform: uppercase;
     letter-spacing: .5vh;
@@ -203,6 +232,8 @@ body{
     display: flex;
     width: 100%;
     height: 46vh;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
     overflow-x:auto;
     overflow: hidden;
     /*border: 1px solid #d0ff00;*/
@@ -233,6 +264,9 @@ body{
 /* TELA DE CELULAR */
 
 @media (max-width: 1080px){
+    .menuTexto{
+        display: none;
+    }
     .serie-banner{
         display: none;
     }
@@ -248,11 +282,12 @@ body{
         height: 7vh;
         display: flex;
         justify-content: center;
-        left: -9vh;
-        top: -1vh;
+        top: .5vh;
         /*border: 1px solid #d0ff00;*/
     }
     .cabecalho{
+        display: flex;
+        justify-content: center;
         position: fixed;
         display: table-cell;
         vertical-align: middle;
@@ -264,14 +299,25 @@ body{
         /*border: 1px solid #d0ff00; */
     }
     .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         font-size: 1.5vh;
         text-align: center;
-        margin-top: 6.5vh;
-        margin-left: 0;
+        margin-top: 1.5vh;
+        margin-left: 8vh;
         width: 100%;
         word-spacing: 3vh;
         /*border: 1px solid #d0ff00 */
+    }
+    .pesquise-serie{
+        margin-top: 12px;
+        margin-left: 35vw;
+        width: 100%;
+        height: 5vh;
+        font-size: 2vh;
+        border-radius: 20px;
     }
     .menu a{
         letter-spacing: .5vh;
@@ -280,26 +326,11 @@ body{
         display: none;
     }
     .botao-assistir{
-        position: relative;
-        display: table-cell;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: 'Recta-Bold';
-        top: -10vh;
-        left: 24%;
-        background-color: rgba(255, 255, 255, 0);
-        border-style: none;
-        width: 50%;
-        height: 6vh;
-        border-radius: 1vh;
-        font-size: 2vh;
-        text-align: center;
-        border: 1px solid rgb(235, 235, 235);
-        color: #ffff;  
+        display: none;
     }
     .texto-recomendado{
         color: #ffff;
-        margin-top: 10vh;
+        margin-top: 0vh;
         font-size: 2vh;
         margin-bottom: 0vh;
         margin-left: 2vh;
